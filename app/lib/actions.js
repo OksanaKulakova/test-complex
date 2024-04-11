@@ -26,11 +26,9 @@ export async function getReviews() {
 
 export async function getProducts(page = 1, page_size = 6) {
   const params = {
-    page: page || 1,
-    page_size: page_size || 6,
+    page: page,
+    page_size: page_size,
   };
-
-  console.log(params);
 
   const searchParams = new URLSearchParams(params).toString();
 
