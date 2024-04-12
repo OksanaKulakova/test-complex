@@ -1,8 +1,5 @@
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 68px;
+.input {
+  width: 100%;
   background-color: var(--color-black);
   border: none;
   border-radius: var(--border-radius);
@@ -12,11 +9,8 @@
   line-height: 44px;
   color: var(--white-text-color);
   text-align: center;
-
-  transition: background-color 300ms ease-out;
 }
 
-.button:hover {
-  background-color: var(--color-dark-grey);
-  cursor: pointer;
+.input-text {
+  text-align: left;
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Suspense } from "react";
-import Button from "@/app/components/button/button";
+import AddCardButton from "@/app/components/cart/add-cart-button";
 
 const imageStyle = {
   borderRadius: "15px",
@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
       <div className="product-title">{product.title}</div>
       <div className="product-description">{product.description}</div>
       <div className="product-price">цена: {product.price}₽</div>
-      <Button>купить</Button>
+      <AddCardButton product={product} />
     </div>
   );
 }

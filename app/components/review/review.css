@@ -1,9 +1,12 @@
+.review-section {
+  margin-top: 105px;
+}
+
 .review-list {
   display: flex;
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
-  margin-top: 105px;
 }
 
 .review-card {
