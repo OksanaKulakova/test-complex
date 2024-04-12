@@ -1,0 +1,27 @@
+.order-form {
+  display: flex;
+  gap: 17px;
+}
+
+.order-form input {
+  max-width: 400px;
+}
+
+.order-form button {
+  width: 268px;
+  height: 68px;
+}
+
+@media screen and (max-width: 767px) {
+  .order-form {
+    flex-wrap: wrap;
+  }
+
+  .order-form input {
+    max-width: 100%;
+  }
+
+  .order-form button {
+    width: 100%;
+  }
+}

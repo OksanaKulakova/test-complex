@@ -49,3 +49,39 @@ export async function getProducts(page = 1, page_size = 6) {
 
   return products;
 }
+
+export async function createOrder(prevState, formData) {
+  const url = `${baseUrl}/order`;
+
+  const phone = formData.get("phone");
+  const preparePhone = phone.replace(/\D+/g, "");
+
+  const isValidPhone = Boolean(preparePhone.length === 11);
+
+  if (!isValidPhone) {
+    return {
+      success: false,
+      errors: { phone: "Введите корректный номер телефона" },
+    };
+  }
+
+  const data = {
+    phone: preparePhone,
+    cart: JSON.parse(formData.get("cart")),
+  };
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (!response.ok) {
+    console.log(response);
+    // throw new Error(`Failed to fetch data ${response.status}`);
+  }
+
+  return await response.json();
+}

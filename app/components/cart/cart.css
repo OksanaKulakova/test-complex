@@ -67,19 +67,6 @@
   cursor: pointer;
 }
 
-.cart-order {
-  display: flex;
-  gap: 17px;
-}
-
-.cart-order input {
-  max-width: 400px;
-}
-
-.cart-order button {
-  width: 268px;
-}
-
 .add-card-button {
   display: flex;
   gap: 8px;
@@ -97,18 +84,6 @@
   }
 
   .card-item-title {
-    width: 100%;
-  }
-
-  .cart-order {
-    flex-wrap: wrap;
-  }
-
-  .cart-order input {
-    max-width: 100%;
-  }
-
-  .cart-order button {
     width: 100%;
   }
 }
