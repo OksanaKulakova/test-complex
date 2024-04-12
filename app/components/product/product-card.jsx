@@ -6,7 +6,7 @@ const imageStyle = {
   objectFit: "cover",
 };
 
-export default async function productCard({ product }) {
+export default function ProductCard({ product }) {
   return (
     <div className="product-card">
       <div className="product-image">
