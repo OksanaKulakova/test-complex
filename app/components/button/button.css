@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--white-text-color);
+  text-align: center;
+
+  transition: background-color 300ms ease-out;
+}
+
+.button:hover {
+  background-color: var(--color-dark-grey);
+  cursor: pointer;
+}
