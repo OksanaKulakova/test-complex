@@ -32,7 +32,7 @@ export default function AddCardButton({ product }) {
   };
 
   return count ? (
-    <div className="cart-footer">
+    <div className="add-card-button">
       <Button onClick={removeFromCart}>-</Button>
       <InputNumber number={count} handler={(value) => handleChange(value)} />
       <Button onClick={addToCart}>+</Button>

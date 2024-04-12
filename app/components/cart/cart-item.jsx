@@ -7,9 +7,8 @@ export default function CartItem(props) {
   return (
     <div className="card-item">
       <div className="card-item-title">{props.title}</div>
-      <div>{props.price}₽</div>
-      <div>x{props.quantity}</div>
-      <div>{props.price * props.quantity}₽</div>
+      <div className="card-item-quantity">x{props.quantity}</div>
+      <div className="card-item-total">{props.price * props.quantity}₽</div>
 
       <button
         className="cart-item-delete"
