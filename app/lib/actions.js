@@ -78,10 +78,5 @@ export async function createOrder(prevState, formData) {
     body: JSON.stringify(data),
   });
 
-  if (!response.ok) {
-    console.log(response);
-    // throw new Error(`Failed to fetch data ${response.status}`);
-  }
-
   return await response.json();
 }
