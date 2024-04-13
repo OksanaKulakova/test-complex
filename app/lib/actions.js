@@ -1,8 +1,5 @@
 "use server";
 
-import { notFound, redirect } from "next/navigation";
-import { revalidatePath } from "next/cache";
-
 const baseUrl = "http://o-complex.com:1337";
 
 export async function getReviews() {
