@@ -33,9 +33,13 @@ export default function AddCardButton({ product }) {
 
   return count ? (
     <div className="add-card-button">
-      <Button onClick={removeFromCart}>-</Button>
+      <Button className={"button-square"} onClick={removeFromCart}>
+        -
+      </Button>
       <InputNumber number={count} handler={(value) => handleChange(value)} />
-      <Button onClick={addToCart}>+</Button>
+      <Button className={"button-square"} onClick={addToCart}>
+        +
+      </Button>
     </div>
   ) : (
     <Button onClick={addToCart}>купить</Button>

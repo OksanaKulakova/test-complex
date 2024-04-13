@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 68px;
+  /* min-width: 68px; */
   background-color: var(--color-black);
   border: none;
   border-radius: var(--border-radius);
@@ -19,4 +19,18 @@
 .button:hover {
   background-color: var(--color-dark-grey);
   cursor: pointer;
+}
+
+.button-delete {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.button-square {
+  width: 68px;
+  height: 68px;
+  flex: none;
 }

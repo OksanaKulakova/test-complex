@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "./cart-context";
+import Button from "@/app/components/button/button";
 
 export default function CartItem(props) {
   const cart = useContext(CartContext);
@@ -10,12 +11,9 @@ export default function CartItem(props) {
       <div className="card-item-quantity">x{props.quantity}</div>
       <div className="card-item-total">{props.price * props.quantity}₽</div>
 
-      <button
-        className="cart-item-delete"
-        onClick={() => cart.remove(props.id)}
-      >
+      <Button className={"button-delete"} onClick={() => cart.remove(props.id)}>
         x
-      </button>
+      </Button>
     </div>
   );
 }
