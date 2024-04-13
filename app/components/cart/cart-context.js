@@ -26,6 +26,10 @@ const CartContextProvider = (props) => {
     dispatch({ type: "REMOVE_ALL_ITEM" });
   };
 
+  value.setItems = (items) => {
+    dispatch({ type: "SET_ITEMS", payload: { items: items } });
+  };
+
   return (
     <CartContext.Provider value={value}>{props.children}</CartContext.Provider>
   );

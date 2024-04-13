@@ -33,6 +33,11 @@ export default function CartReducer(state, { type, payload }) {
         ...state,
         items: [],
       };
+    case "SET_ITEMS":
+      return {
+        ...state,
+        items: [...payload.items],
+      };
     default:
       return state;
   }
