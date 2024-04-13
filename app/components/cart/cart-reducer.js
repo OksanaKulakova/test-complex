@@ -28,6 +28,11 @@ export default function CartReducer(state, { type, payload }) {
         ...state,
         items: state.items.filter((item) => item.id !== payload.id),
       };
+    case "REMOVE_ALL_ITEM":
+      return {
+        ...state,
+        items: [],
+      };
     default:
       return state;
   }

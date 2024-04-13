@@ -22,6 +22,10 @@ const CartContextProvider = (props) => {
     dispatch({ type: "REMOVE_ITEM", payload: { id: id } });
   };
 
+  value.clear = () => {
+    dispatch({ type: "REMOVE_ALL_ITEM" });
+  };
+
   return (
     <CartContext.Provider value={value}>{props.children}</CartContext.Provider>
   );

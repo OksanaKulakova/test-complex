@@ -20,6 +20,7 @@ export default function OrderForm() {
   useEffect(() => {
     if (state.success) {
       setShowPopup(true);
+      cart.clear();
     }
   }, [state]);
 
