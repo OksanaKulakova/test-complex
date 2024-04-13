@@ -16,21 +16,25 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## В рамках тестового задания сделано:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- адаптив под мобильные устройства и планшеты
+- наполнение контентом отзывов из html обернутого в json
+- пофикшена xss атака через контент отзывов
+- наполнение контентом товары по апи
+  - первая страница загружается сразу
+  - остальные страницы подгружаются по мере прокрутки вниз
+- прелоадер при загрузке товаров
+- при нажатии на кнопку "купить" товар добавляетя в корзину, появляются кнопки + и - и поле для ввода кол-ва товара (начальное значение 1)
+- при нажатии на кнопки + и - изменяется количество товара
+- реализована возможность ввести количество товара в поле
+- при изменении количества какого-либо из товаров, меняется информация в корзине
+- выбранные товары и введенный номер телефона сохраняются при перезагрузке страницы
+- маска в поле для телефона
+- при нажатии кнопки "заказать" идет проверка того, что телефон полностью введен (11 цифр)
+  - если всё хорошо - отправляется запрос на сервер
+  - если есть ошибки - выводится ошибка под полем номера телефона
+- после отправки запроса и получения ответа от сервера показывается попап с сообщением об успешном создании заказать
+- корзина очищается после успешно созданного заказать
+- добавлены кнопки удаления товара из корзины
+- добавлен расчет итоговой стоимости в корзине
